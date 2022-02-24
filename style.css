@@ -1,0 +1,886 @@
+* {
+  box-sizing: border-box;
+  /* padding: 0;
+  margin: 0; */
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+/****** Header ******/
+
+header {
+  background-image: url("Assets/crowd(2).jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* position: relative;
+  display: flex;
+  flex-direction: column; */
+  /* background-blend-mode: color; */
+}
+
+/* header::before {
+  content: "";
+  width: 100%;
+  background: blue;
+  opacity: 0.5;
+} */
+
+/****** Navigation ******/
+
+header nav {
+  width: 100%;
+  height: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  transition: 1s;
+
+  /* test */
+  background-color: transparent;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+nav a:hover {
+  font-weight: 700;
+}
+
+nav li {
+  display: inline;
+  margin-left: 15px;
+}
+
+nav #logo,
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav #logo {
+  height: 50px;
+  width: 120px;
+  background-image: url("Assets/TC-logos_white(2).png");
+  background-position: center;
+  background-size: cover;
+
+  /* test */
+  /* border: 2px solid red; */
+}
+
+.nav-icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    display: none;
+  }
+  nav .nav-icon {
+    /* float: right; */
+    display: block;
+  }
+  nav #logo {
+    height: 30px;
+    width: 100px;
+  }
+  header nav {
+    height: 50px;
+  }
+  /* .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+  } */
+}
+
+/****** Jumbotron ******/
+
+header #jumbotron {
+  width: 100%;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+
+  /* test */
+  /* border: 2px solid yellow; */
+}
+
+#jumbotron #title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  margin-right: 400px;
+  color: white;
+}
+
+#title #desc-title {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+#jumbotron #register {
+  margin-left: 300px;
+  display: flex;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+#register table,
+#register table td {
+  border: 1px solid white;
+  color: white;
+}
+
+#register table td {
+  padding: 10px;
+}
+
+#register table {
+  border-collapse: collapse;
+}
+
+#register .btn {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid white;
+
+  /* test */
+  /* border: 1px solid blue; */
+}
+
+#register .btn:hover {
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  header #jumbotron {
+    height: 450px;
+    gap: 90px;
+  }
+  #jumbotron #title,
+  #jumbotron #register {
+    margin: 0;
+  }
+  #jumbotron #title {
+    font-size: 30px;
+  }
+  #jumbotron #desc-title {
+    font-size: 20px;
+  }
+  #jumbotron #register {
+    font-size: 15px;
+  }
+}
+
+/****** Main ******/
+
+/* main {
+  test
+  border: 2px solid purple;
+  height: 500px;
+} */
+
+/****** Main - speakers ******/
+
+#content #speakers {
+  background-color: #aac4f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding-bottom: 10px; */
+  /* gap: 10px; */
+}
+
+#content .sub-title {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+#content .sub-title h1 {
+  font-size: 40px;
+}
+
+#speakers .sub-title h1 {
+  color: #131e6b;
+}
+
+#speakers .sub-title p {
+  font-size: 15px;
+  color: #8461bd;
+}
+
+#speakers .speaker {
+  background-color: white;
+  width: 80%;
+  padding: 90px;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+
+.speaker .img-profile {
+  width: 220px;
+  height: 375px;
+}
+
+.speaker .img-profile#robyn {
+  background-image: url("Assets/robyn.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.speaker .img-profile#simon {
+  background-image: url("Assets/simon.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.speaker .img-profile#mathew {
+  background-image: url("Assets/mathew.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.speaker .img-profile#britney {
+  background-image: url("Assets/britney.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.speaker .desc-profile h2,
+.speaker .desc-profile p {
+  font-family: Raleway, sans-serif;
+}
+
+.speaker .desc-profile h3 {
+  font-weight: 400;
+  color: grey;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+.speaker .desc-profile p {
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.social-media table,
+.social-media td {
+  border: 1px solid #aac4f0;
+  color: #8461bd;
+}
+
+.social-media td {
+  padding: 10px;
+}
+
+.social-media td:hover {
+  cursor: pointer;
+}
+
+.social-media table {
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.speaker .social-media .twitter {
+  width: 35px;
+  height: 35px;
+  background-image: url("Assets/twitter.png");
+}
+
+.speaker .social-media .linkedin {
+  width: 35px;
+  height: 35px;
+  background-image: url("Assets/linkedin.png");
+}
+
+@media screen and (max-width: 600px) {
+  #content .sub-title h1 {
+    font-size: 25px;
+  }
+  #speakers .sub-title p {
+    font-size: 12px;
+  }
+  #content #speakers {
+    gap: 15px;
+  }
+  #speakers .speaker {
+    width: 100%;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  .speaker#simon,
+  .speaker#britney {
+    flex-direction: column-reverse;
+  }
+  .speaker .desc-profile p {
+    font-size: 15px;
+  }
+  .speaker .img-profile {
+    width: 100%;
+    /* height: 370px; */
+  }
+}
+
+/****** Main - Agenda ******/
+
+#content #agenda {
+  width: 100%;
+  height: 1300px;
+  background-color: #131e6b;
+  color: white;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -150px;
+}
+
+#agenda .sub-title {
+  width: 50%;
+}
+
+#agenda .sub-title h1 {
+  text-align: left;
+}
+
+#agenda tr {
+  border-bottom: 0.5px solid white;
+}
+
+#agenda tr#last {
+  border: none;
+}
+
+#agenda td,
+#agenda th {
+  padding: 30px;
+}
+
+#agenda th {
+  text-align: right;
+  /* border-right: 00.5px dotted white; */
+}
+
+/* #agenda tr:hover {
+  background-color: #8461bd;
+} */
+
+#agenda table {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  width: 70%;
+  border-collapse: collapse;
+}
+
+#agenda #highlight {
+  background-color: white;
+  width: 80%;
+  height: 150px;
+  color: #131e6b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+#highlight td {
+  padding: 10px;
+}
+
+#highlight table {
+  text-align: center;
+}
+
+#highlight .num {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#highlight .num-desc {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#highlight #mid {
+  border-left: 0.5px solid #8461bd;
+  border-right: 00.5px solid #8461bd;
+}
+
+#highlight .btn {
+  width: 150px;
+  height: 70px;
+  background-color: #8461bd;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #8461bd;
+}
+
+/* #highlight .btn p {
+  margin: auto;
+} */
+
+#highlight .btn:hover {
+  background-color: white;
+  color: #8461bd;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  #content #agenda {
+    margin-top: 0;
+    height: 800px;
+  }
+  #agenda .sub-title,
+  #agenda table {
+    width: 80%;
+    font-size: 15px;
+  }
+  #agenda td,
+  #agenda th {
+    padding: 15px;
+  }
+  #agenda #highlight {
+    width: 100%;
+    height: 250px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  #highlight .num {
+    font-size: 20px;
+  }
+  #highlight .num-desc {
+    font-size: 15px;
+  }
+  #highlight table {
+    width: 90%;
+  }
+  #highlight td {
+    padding: 15px;
+  }
+  #highlight .btn {
+    width: 60%;
+    height: 70px;
+    background-color: #8461bd;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+}
+
+/****** Main - Venue ******/
+
+#content #venue {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: #aac4f0;
+  margin-top: -300px;
+}
+
+#venue #desc-venue {
+  width: 50%;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#desc-venue p,
+#desc-venue h3,
+#desc-venue h1 {
+  text-align: left;
+}
+
+#desc-venue h1 {
+  color: #131e6b;
+}
+
+#desc-venue .sub-title h3 {
+  font-weight: 400;
+  color: #8461bd;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+#desc-venue p {
+  font-family: Raleway, sans-serif;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+#venue #img-venue {
+  width: 50%;
+  height: 800px;
+  background-image: url("Assets/venue(2).jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+@media screen and (max-width: 600px) {
+  #content #venue {
+    flex-direction: column;
+  }
+  #venue #img-venue {
+    width: 100%;
+    height: 600px;
+  }
+  #venue #desc-venue {
+    padding: 10px;
+    width: 100%;
+    height: 500px;
+  }
+  #desc-venue p {
+    font-size: 15px;
+  }
+}
+
+/****** Main - Summary ******/
+
+#content #summary {
+  width: 100%;
+  background-color: #131e6b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 70px;
+  padding-bottom: 70px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#summary .sub-title {
+  width: 70%;
+  text-align: left;
+  font-family: Raleway, sans-serif;
+}
+
+#summary .sub-title p {
+  font-size: 20px;
+  color: #8461bd;
+}
+
+#summary #info {
+  width: 70%;
+  height: 200px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 30px; */
+}
+
+#summary .point {
+  height: 70px;
+}
+
+#summary .point-title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+#summary .point-desc {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#summary .btn {
+  width: 150px;
+  height: 70px;
+  background-color: #8461bd;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #8461bd;
+}
+
+/* #summary .btn p {
+  margin: auto;
+} */
+
+#summary .btn:hover {
+  background-color: transparent;
+  color: #8461bd;
+  cursor: pointer;
+}
+
+#summary #contact {
+  width: 70%;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contact #input {
+  display: flex;
+}
+
+#input #form {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+#form input {
+  height: 50px;
+  background-color: transparent;
+  color: grey;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#form .btn {
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 12px;
+}
+
+#form .btn p {
+  margin: auto;
+}
+
+#form .btn:hover {
+  background-color: #8461bd;
+  border: 1px solid #8461bd;
+  color: white;
+}
+
+#input #media {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+#media .logo {
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+}
+
+#media .logo:hover {
+  cursor: pointer;
+}
+
+#media .logo#facebook {
+  background-image: url("Assets/facebook-white.png");
+}
+
+#media .logo#instagram {
+  background-image: url("Assets/instagram-white.png");
+}
+
+#media .logo#twitter {
+  background-image: url("Assets/twitter-white.png");
+}
+
+#media .logo#linkedin {
+  background-image: url("Assets/linkedin-white.png");
+}
+
+@media screen and (max-width: 600px) {
+  #summary .sub-title,
+  #summary #info,
+  #summary #contact {
+    width: 90%;
+  }
+  #content #summary {
+    padding: 0 0 30px 0;
+  }
+  #summary #info {
+    flex-wrap: wrap;
+    height: 300px;
+  }
+  #summary .btn {
+    width: 90px;
+    height: 50px;
+    padding: 0px;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+  #summary .point-title {
+    font-size: 20px;
+  }
+  #summary .point-desc {
+    font-size: 15px;
+  }
+  #summary #input,
+  #input #form {
+    flex-direction: column;
+  }
+  #input #form,
+  #input #media {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #form .btn,
+  #form input {
+    width: 100%;
+  }
+  #form .btn p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  #summary #input {
+    gap: 30px;
+  }
+}
+
+/****** Aside ******/
+
+main aside {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #7365c2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+aside .sub-title {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+aside .sub-title h1 {
+  font-size: 40px;
+  color: white;
+}
+
+aside #profile {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#profile #my-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url("Assets/profile2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#profile #my-bio {
+  width: 70%;
+  padding: 20px;
+}
+
+#my-bio p {
+  font-family: Raleway, sans-serif;
+  line-height: 1.5;
+  font-size: 18px;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  main aside {
+    padding: 0;
+  }
+  aside #profile {
+    width: 90%;
+    flex-direction: column;
+  }
+  aside .sub-title h1 {
+    font-size: 25px;
+  }
+  #profile #my-bio {
+    width: 90%;
+  }
+  #my-bio p {
+    font-size: 15px;
+  }
+}
+
+/****** Footer ******/
+
+body footer {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7365c2;
+}
+
+footer #foot {
+  width: 80%;
+  color: white;
+}
+
+#foot p {
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+}
